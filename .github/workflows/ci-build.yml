@@ -19,7 +19,7 @@ jobs:
         dotnet-version: 6.0.100-rc.1.21458.32
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
+    - name: Build miminalApis
+      run: dotnet build ./MinimalApi/**.csproj --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
