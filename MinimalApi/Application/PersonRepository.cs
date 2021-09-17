@@ -1,8 +1,8 @@
 ﻿public class PersonRepository : IPersonRepository
 {
-    private ILogger logger;
+    private ILogger<Person> logger;
     List<Person> persons = new List<Person>();
-    public PersonRepository(ILogger logger)
+    public PersonRepository(ILogger<Person> logger)
     {
         this.logger = logger;
         
